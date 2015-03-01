@@ -1,0 +1,214 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script runat="server">
+
+    protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+    {
+        //Response.Redirect(@"C:\Users\japa\Documents\Visual Studio 2010\WebSites\WebSite1\acc1.aspx");
+   
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+  /*  protected void LoginButton_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("acc1.aspx");
+       // SqlConnection con = new SqlConnection();
+
+        
+ 
+    } */
+
+    protected void UserName_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 30%;
+            float: right;
+            margin-left: 232px;
+            margin-right: 312px;
+        }
+        .style2
+        {
+            height: 261px;
+            width: 352px;
+        }
+        #abc
+        {
+            margin-right:100 px;
+            height: 319px;
+            width: 387px;
+        }
+        .style7
+        {
+            height: 571px;
+            width: 352px;
+        }
+        .style6
+        {
+            height: 39px;
+        }
+        </style>
+</head>
+<body background="bg/desktop-wallpapers-fantastic-website-background-hd-wallpapers.jpg">
+    <form id="form1" runat="server">
+    <div style="height: 848px">
+    <asp:Literal ID="Literal1" runat="server" Mode ="Transform">
+            <div id="fb-root"></div>
+<script>    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=257965964247226";
+        fjs.parentNode.insertBefore(js, fjs);
+    } (document, 'script', 'facebook-jssdk'));</script>
+            <div class="fb-like-box" data-href="https://www.facebook.com/msutecho?fref=ts" data-width="292" data-show-faces="true" data-stream="true" data-show-border="true" data-header="true"></div>           
+        </asp:Literal>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Image ID="Image1" runat="server" Height="237px" 
+            ImageUrl="~/images/techovine3.png" Width="355px" />
+        <br />
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Login ID="Login1" runat="server" BackColor="Black" BorderColor="#B5C7DE" 
+                    BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" 
+                    Font-Size="0.8em" ForeColor="Black" Height="223px" 
+                    onauthenticate="Login1_Authenticate" style="margin-left: 505px; margin-top: 3px" 
+                    Width="237px">
+                    <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+                    <LayoutTemplate>
+                        <table cellpadding="4" cellspacing="0" style="border-collapse:collapse;">
+                            <tr>
+                                <td>
+                                    <table cellpadding="0" style="height:202px;width:375px;">
+                                        <tr>
+                                            <td align="left" bgcolor="#FFFF66" class="style6" colspan="2" 
+                                                
+                                                
+                                                style="color:#FFFFFF; background-color:#00CCFF; font-size:medium; font-weight:bold; font-family: broadway;">
+                                                Log In</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" 
+                                                style="font-family: broadway; font-size: small; color: #008080; background-color: #000000;">
+                                                <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName" 
+                                                    ForeColor="White">Email id:</asp:Label>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox ID="UserName" runat="server" Font-Size="0.8em" Width="148px" 
+                                                    ontextchanged="UserName_TextChanged"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" 
+                                                    ControlToValidate="UserName" ErrorMessage="User Name is required." 
+                                                    ToolTip="User Name is required." ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" 
+                                                style="font-family: broadway; font-size: small; color: #008080; background-color: #000000">
+                                                <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password" 
+                                                    ForeColor="White">Password:</asp:Label>
+                                                &nbsp;</td>
+                                            <td>
+                                                <asp:TextBox ID="Password" runat="server" Font-Size="0.8em" TextMode="Password" 
+                                                    Width="147px"></asp:TextBox>
+                                                <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" 
+                                                    ControlToValidate="Password" ErrorMessage="Password is required." 
+                                                    ToolTip="Password is required." ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" 
+                                                style="font-family: broadway; font-size: small; color: #008080; background-color: #000000">
+                                                <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." 
+                                                    ForeColor="#0099FF" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" colspan="2" 
+                                                style="color:#FFFF00; font-family: broadway; font-size: medium; background-color: #000000;">
+                                                <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" colspan="2">
+                                                <asp:Button ID="LoginButton" runat="server" BackColor="#0099FF" 
+                                                    BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" CommandName="Login" 
+                                                    Font-Names="Verdana" Font-Size="0.8em" ForeColor="Black" Text="Log In" 
+                                                    ValidationGroup="ctl00$Login1" onclick="LoginButton_Click" 
+                                                    style="height: 18px" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </LayoutTemplate>
+                    <LoginButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" 
+                        BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" />
+                    <TextBoxStyle Font-Size="0.8em" />
+                    <TitleTextStyle BackColor="#507CD1" Font-Bold="True" Font-Size="0.9em" 
+                        ForeColor="White" />
+                </asp:Login>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;<br />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:LinkButton 
+            ID="LinkButton2" runat="server" PostBackUrl="~/Default2.aspx" 
+            Font-Names="Broadway" Font-Size="Large" ForeColor="White">Admin login</asp:LinkButton>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="White" 
+            PostBackUrl="~/signup.aspx" Font-Names="Broadway" Font-Size="Large" 
+            onclick="LinkButton1_Click">Sign up!!</asp:LinkButton>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+&nbsp;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
+        <br />
+    </div>
+    <table align="left" class="style1">
+        <tr>
+            <td class="style7" align="left">
+                <div id="abc">
+&nbsp;<br />
+                    <br />
+                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2">
+                &nbsp;</td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
